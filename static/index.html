@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>FastMap.ai</title>
+    <link rel="stylesheet" media="screen" href="/static/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">FastMap.ai </h1>
+        <p>
+          
+        </p>
+        <p>
+          <form action="/get_results" method="post">
+            <!-- <p>Image 1</p>
+            <input type="radio" name="Alcohol" value="12.82">
+            <p>Image 2</p>
+            <input type="radio" name="Malic acid" value="3.37">
+            <p>Image 3</p>
+            <input type="radio" name="Ash" value="2.3"> -->
+            
+            
+            <p>Please select the aerial imagery you would like to map:</p>
+               
+
+                <label>
+                    <input type="radio" name="img_path" value="../seg_build_flask/static/images/img_1.png" checked>
+                    <img src="../static/images/img_1.png">
+                </label>
+
+                <label>
+                    <input type="radio" name="img_path" value="../seg_build_flask/static/images/img_2.png" checked>
+                    <img src="../static/images/img_2.png">
+                </label>
+
+                <label>
+                    <input type="radio" name="img_path" value="../seg_build_flask/static/images/img_3.png" checked>
+                    <img src="../static/images/img_3.png">
+                </label>
+              
+            <br>
+
+            <input type="submit" class="btn btn-primary btn-lg" value="Map!">
+          </form>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

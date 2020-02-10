@@ -1,0 +1,1 @@
+MODEL_FILE = "src/models/acc-665946-focaldice-unfrozen.pkl"
