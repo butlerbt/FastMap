@@ -7,25 +7,21 @@
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-3">FastMap.ai </h1>
-        <p>
-          
-        </p>
+       
         <p>
           <form action="/get_results" method="post">
-            <!-- <p>Image 1</p>
-            <input type="radio" name="Alcohol" value="12.82">
-            <p>Image 2</p>
-            <input type="radio" name="Malic acid" value="3.37">
-            <p>Image 3</p>
-            <input type="radio" name="Ash" value="2.3"> -->
-            
             
             <p>Please select the aerial imagery you would like to map:</p>
                
 
                 <label>
-                    <input type="radio" name="img_path" value="../seg_build_flask/static/images/img_1.png" checked>
-                    <img src="../static/images/img_1.png">
+                    <input type="radio" name="img_path" value="https://tiles.openaerialmap.org/5b1009f22b6a08001185f24a/0/5b1009f22b6a08001185f24b/19/319454/270706.png" checked>
+                    <img src="https://tiles.openaerialmap.org/5b1009f22b6a08001185f24a/0/5b1009f22b6a08001185f24b/19/319454/270706.png">
+                </label>
+
+                <label>
+                  <input type="radio" name="img_path" value="../seg_build_flask/static/images/img_1.png" checked>
+                  <img src="../static/images/img_1.png">
                 </label>
 
                 <label>
@@ -40,10 +36,123 @@
               
             <br>
 
+                <label>
+                  <input type="radio" name="img_path" value="https://tiles.openaerialmap.org/5d30bac2e757aa0005951652/0/5d30bac2e757aa0005951653/19/136700/197574.png" checked>
+                  <img src="https://tiles.openaerialmap.org/5d30bac2e757aa0005951652/0/5d30bac2e757aa0005951653/19/136700/197574.png">
+                </label>
+
+                <label>
+                  <input type="radio" name="img_path" value="https://tiles.openaerialmap.org/5d050c3673de290005853a91/0/5d050c3673de290005853a92/18/203079/117283.png" checked>
+                  <img src="https://tiles.openaerialmap.org/5d050c3673de290005853a91/0/5d050c3673de290005853a92/18/203079/117283.png">
+                </label>
+
+                <label>
+                  <input type="radio" name="img_path" value="https://tiles.openaerialmap.org/5c88ff77225fc20007ab4e26/0/5c88ff77225fc20007ab4e27/21/1035771/1013136.png" checked>
+                  <img src="https://tiles.openaerialmap.org/5c88ff77225fc20007ab4e26/0/5c88ff77225fc20007ab4e27/21/1035771/1013136.png">
+                </label>
+
+                <label>
+                  <input type="radio" name="img_path" value="https://tiles.openaerialmap.org/5beaaba463f9420005ef8db0/0/5beaaba463f9420005ef8db1/19/313479/283111.png" checked>
+                  <img src="https://tiles.openaerialmap.org/5beaaba463f9420005ef8db0/0/5beaaba463f9420005ef8db1/19/313479/283111.png">
+                </label>
+
+            <br>
+
             <input type="submit" class="btn btn-primary btn-lg" value="Map!">
           </form>
         </p>
       </div>
     </div>
   </body>
-</html>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <p>
+          Or, select the area to be mapped:
+        </p>
+        <br>
+
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_543b8639daa142bbabdac79382f79fe2 {
+                    position: relative;
+                    width: 80.0%;
+                    height: 100.0%;
+                    left: 10.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+
+<body>    
+    
+            <div class="folium-map" id="map_543b8639daa142bbabdac79382f79fe2" ></div>
+            <form action="/get_map_results" method="post">
+            <input type="text" id="lat" name="lat">
+            <input type="text" id="lng" name="lng">
+            <input type="submit" class="btn btn-primary btn-lg" value="submit">
+            </form>
+</body>
+<script>    
+    
+            var map_543b8639daa142bbabdac79382f79fe2 = L.map(
+                "map_543b8639daa142bbabdac79382f79fe2",
+                {
+                    center: [37.7537286, -106.1078815],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: false,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9543bcc749b740ce81c23f5df45d82d8 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 40, "maxZoom": 40, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_543b8639daa142bbabdac79382f79fe2);
+
+            
+
+            var popup = L.popup();
+
+            function onMapClick(e) {
+                lat = document.querySelector("#lat")
+                lat.value = e.latlng.lat
+
+                lng = document.querySelector("#lng")
+                lng.value = e.latlng.lng
+                // popup
+                //     .setLatLng(e.latlng)
+                //     .setContent("You clicked the map at " + e.latlng.toString())
+                //     .openOn(map_543b8639daa142bbabdac79382f79fe2);
+            }
+
+            map_543b8639daa142bbabdac79382f79fe2.on('click', onMapClick);
+
+</script>
+

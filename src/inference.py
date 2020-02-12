@@ -6,7 +6,6 @@ from fastai.callbacks import *
 from skimage import io
 from fastai.utils.collect_env import *
 import torch 
-from app import app
 import matplotlib
 matplotlib.use('Agg')
 
@@ -32,15 +31,6 @@ def inference_mask(model, t_img):
     inference_mask = image2np(outputs[2])
     inference_mask = (inference_mask*255).astype('uint8')
     return inference_mask
-
-# def visualize_inference(inference_mask, input_img):
-    
-#     fig, (ax1, ax2) = plt.subplots(1,2, figsize=(10,5))
-#     ax1.imshow(io.imread(input_img))
-#     ax2.imshow(inference_mask[:,:,1], alpha=1)
-#     ax1.axis('off')
-#     
-#     
 
 def visualize_inference(inference_mask, input_img):
     

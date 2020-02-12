@@ -2,15 +2,13 @@
 
 from flask import Flask, send_from_directory, render_template, request, abort
 import time 
-# from src.models.inference import *
-
-
+from src.inference import *
+from src.map_selector import *
 
 app = Flask(__name__, static_url_path="/static")
 app.config.from_object("default_settings")
 
-from src.inference import *
-from src.inference_classes import *
+
 
 @app.route("/")
 def index():
@@ -25,19 +23,26 @@ def get_results():
 
     predicted_mask = make_prediction(img_path)
 
-    # # test_value, errors = validate_input(data)
-
-    # if not errors:
-    #     predicted_class = predict_wine(test_value)
-    #     return render_template("results.html", predicted_mask=predicted_mask)
-    # else:
-    #     return abort(400, errors)
-
     
-    return render_template("results.html",timestamp=str(time.time()))
+    return render_template("results.html", timestamp=str(time.time()))
 
 
+@app.route("/get_map_results", methods=["POST"])
+def get_map_results():
+    """ Mask the buildings from the folium live map """
+    lat = float(request.form["lat"])
+    lng = float(request.form["lng"])
+    location = [lat, lng]
+    
 
+    print(location)
+    m = render_map(location= location, aerial = True)
+    capture_map()
+    img_path = "../seg_build_flask/static/images/screenshot.png"
+    predicted_mask = make_prediction(img_path)
+
+    return render_template("results.html", timestamp = str(time.time()))
+    
 
 
 # if __name__ == "__main__":
