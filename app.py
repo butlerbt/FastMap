@@ -13,7 +13,7 @@ app.config.from_object("default_settings")
 @app.route("/")
 def index():
     """Return the main page."""
-    return send_from_directory("static", "index.html")
+    return send_from_directory("static", "index_2.html")
 
 @app.route("/get_results", methods=["POST"])
 def get_results():
@@ -24,7 +24,7 @@ def get_results():
     predicted_mask = make_prediction(img_path)
 
     
-    return render_template("results.html", timestamp=str(time.time()))
+    return render_template("results_2.html", timestamp=str(time.time()))
 
 
 @app.route("/get_map_results", methods=["POST"])
@@ -41,10 +41,10 @@ def get_map_results():
     img_path = "../seg_build_flask/static/images/screenshot.png"
     predicted_mask = make_prediction(img_path)
 
-    return render_template("results.html", timestamp = str(time.time()))
+    return render_template("results_2.html", timestamp = str(time.time()))
     
 
 
-# if __name__ == "__main__":
-#     serve(app, host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    serve(app, host='0.0.0.0', port=5000)
 

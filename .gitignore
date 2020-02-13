@@ -29,7 +29,11 @@ phantomjs-2.1.1-macosx/
 *.xml
 *.json
 *.geojson
+
+#image files 
 *.tif
+
+
 *.png
 
 #training/testing data:
