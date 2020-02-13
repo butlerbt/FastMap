@@ -4,11 +4,15 @@
 #presentation
 *.key
 
+#Hpantomjs
+phantomjs-2.1.1-macosx/
+
 #large Fast.ai models
 *.pth
 
 #large pickle files
 *.pickle
+*.pkl
 
 # Data files
 *.csv
@@ -25,7 +29,12 @@
 *.xml
 *.json
 *.geojson
+
+#image files 
 *.tif
+
+
+*.png
 
 #training/testing data:
 data/

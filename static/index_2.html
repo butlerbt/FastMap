@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>FastMap.ai </title>
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <script>
+    L_NO_TOUCH = false;
+    L_DISABLE_3D = false;
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+<link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Libraries CSS Files -->
+  <link href="static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="static/lib/venobox/venobox.css" rel="stylesheet">
+  <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+  <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+  <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+
+    
+  <style>
+        #map_543b8639daa142bbabdac79382f79fe2 {
+            position: relative;
+            width: 80.0%;
+            height: 100.0%;
+            left: 10.0%;
+            top: 0.0%;
+        }
+  </style>
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><img src="static/img/logo.png" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#speakers">Test the Model</a></li>
+          
+          <li><a href="#venue">How it Generalizes</a></li>
+          <li><a href="#schedule">Methods</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#supporters">Tech Stack</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0">Geospatial data analyisis using <br><span>Deep Learning</span> </h1>
+      <p class="mb-4 pb-0"> Segmenting Building Footprints from Aerial Imagery </p>
+  
+      <a href="#about" class="about-btn scrollto">About the project</a>
+    </div>
+    <!-- </div> -->
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>FastMap.ai</h2>
+            <p>FastMap.ai is a unique application of deep learning that enables the user to automate the laborious task of mapping. A task that traditionally 
+                takes a trained technician hours of conentrated effort can now be completed in a matter of seconds with 
+                a substantially lower risk for human error. Reducing the human burden of mapping allows organizations to more easily maintain timely, wide scaled, and precise geographic information 
+                thus reducing uncertainty, error, cost, and ultimately providing greater confidence in their geographic-based decisions. 
+            </p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <h3>Reduce Cost</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <h3>Increase confidence</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <h3>Make better decisions</h3>
+            </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+
+    <!--==========================
+      Pre selected tiles test section
+    ============================-->
+    <section id="speakers" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Test the Model</h2>
+          <p>Please select the aerial imagery you would like to map:</p>
+        </div>
+        <form action="/get_results" method="post">
+            <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+                <label>
+                    <input type="radio" name="img_path" value="https://tiles.openaerialmap.org/5b1009f22b6a08001185f24a/0/5b1009f22b6a08001185f24b/19/319454/270706.png" checked>
+                    <img src="https://tiles.openaerialmap.org/5b1009f22b6a08001185f24a/0/5b1009f22b6a08001185f24b/19/319454/270706.png">
+                </label>
+              <div class="details">
+                <p>Well defined, well seperated buildings</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+                <label>
+                    <input type="radio" name="img_path" value="../seg_build_flask/static/images/img_1.png" checked>
+                    <img src="../static/images/img_1.png">
+                </label>
+              <div class="details">
+                <p>Variable colors, ambigious seperation</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+                <label>
+                    <input type="radio" name="img_path" value="../seg_build_flask/static/images/img_2.png" checked>
+                    <img src="../static/images/img_2.png">
+                </label>
+                <div class="details">
+                <p>Building sparse</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+                <label>
+                    <input type="radio" name="img_path" value="../seg_build_flask/static/images/img_3.png" checked>
+                    <img src="../static/images/img_3.png">
+                </label>
+                <div class="details">
+                <p>Buildings overlying variable land covers</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+                <label>
+                    <input type="radio" name="img_path" value="https://tiles.openaerialmap.org/5d30bac2e757aa0005951652/0/5d30bac2e757aa0005951653/19/136700/197574.png" checked>
+                    <img src="https://tiles.openaerialmap.org/5d30bac2e757aa0005951652/0/5d30bac2e757aa0005951653/19/136700/197574.png">
+                  </label>>
+              <div class="details">
+                <p>Western world style suburb</p>                
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+                <label>
+                    <input type="radio" name="img_path" value="https://tiles.openaerialmap.org/5d050c3673de290005853a91/0/5d050c3673de290005853a92/18/203079/117283.png" checked>
+                    <img src="https://tiles.openaerialmap.org/5d050c3673de290005853a91/0/5d050c3673de290005853a92/18/203079/117283.png">
+                  </label>
+              <div class="details">
+                <p>Unusual shaped buildings</p>
+              </div>
+            </div>
+          </div>
+            </div>
+            <div class ="row"> 
+                <div class="col-4"></div>
+                    <div class="col-4">
+                    <input type="submit"  value="Map!" style="width: 100%;"> 
+                    </div> 
+            </div>
+            
+        </form>
+
+      </div>
+      
+    </section>
+
+    
+
+    <!--==========================
+      Map Section
+    ============================-->
+    <section id="venue" class="wow fadeInUp">
+
+        <div class="container-fluid">
+  
+            <div class="section-header">
+                <h2>How it generalizes</h2>
+                <p>Select anywhere in the world to be mapped</p>
+            </div>
+            <div class="container">
+                <div class="row" style="height: 500px">
+                    <div class="folium-map" id="map_543b8639daa142bbabdac79382f79fe2" ></div>
+                </div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <form action="/get_map_results" method="post">
+                            <input type="text" id="lat" name="lat" style="width: 100%;">
+                            <input type="text" id="lng" name="lng" style="width: 100%;">
+                            <input type="submit"  value="submit" style="width: 100%;">
+                        </form> 
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!--==========================
+      Methods Section
+    ============================-->
+    <section id="schedule" class="section-with-bg">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Methods</h2>
+          <h3 class="sub-heading">FastMap.ai was developed over a 3 week concentrated effort and can be described in three distince phases  </h3>
+
+          <p></p>
+        </div>
+        <div class="row">
+
+        
+            <ul class="nav nav-tabs" role="tablist" >
+            <li class="nav-item">
+                <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Data Preparation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Training the Model</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Deployment</a>
+            </li>
+            </ul>
+
+        </div>
+
+
+        <div class="tab-content row justify-content-center">
+
+          <!-- Schdule Day 1 -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+
+           
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time></time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="static/img/data_prep/full.png" alt="Brenden Legros">
+                </div>
+                <h4>Data aquisition <span></span></h4>
+                <p>The dataset consists of neighborhood-scale aerial imagery collected by various means of drone and aircraft photography.
+                    72 high resolution zone images covered 12 various African cities. Each zone was supported with labels in the form of human-drawn building footprints (vectorized polygons).  
+                    The dataset was compiled into a convenient resource for a DrivenData competition and is publicly available. </p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="static/img/data_prep/tiles.png" alt="Hubert Hirthe">
+                </div>
+                <h4> Image and label tiling<span></span></h4>
+                <p>In order to efficiently train an image segmentation model, both the image data and the polygon labels needed to be cut into small tiles.
+                    The tiles needed to be organized such that the label tile and image tile would correspond to the same geographic space. 
+                </p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+                <div class="col-md-2"><time></div>
+                <div class="col-md-10">
+                  <div class="speaker">
+                    <img src="static/img/data_prep/split.png" alt="Jack Christiansen">
+                  </div>
+                  <h4>Train/validation split<span></span></h4>
+                  <p>The sets of tiles making up each zone were split into standard 80% training/20% validation sets through 
+                      random assignment. This strategy seemed like the most dependable method to avoid overfitting due to geographic interdependencies.  
+                  </p>
+                </div>
+              </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time></time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="static/img/data_prep/mask.png" alt="Cole Emmerich">
+                </div>
+                <h4>Burning the polygon labels <span></span></h4>
+                <p>Image segmentation models need the labels to be in the same format as the image data (tensors/arrays). In this 
+                    case the labels were provided in the form of vector data, which is essentially geometric coordinates of the shapes. 
+                    This meant that each polygon needed to be be "burned" into a pixel based mask while maintaining its spatial relation.
+                    Initially the burned masks were 3 channels: footprint, parameter, and contact. In order to alieve certain deployment issues
+                    the masks were instead burned into a single channel representing the building footprints alone. 
+ 
+                </p>
+              </div>
+            </div>
+
+
+         
+
+          </div>
+         
+
+          <!-- Training the model -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time></time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="static/img/data_prep/fastai.png" alt="Brenden Legros">
+                </div>
+                <h4>Fast.ai <span></span></h4>
+                <p>This project utilized the accessible and simple Fast.ai python framework. 
+                    Fast.ai provides an easy API for accessing PyTorch neural network backends. 
+                </p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time></time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="static/img/data_prep/arrow.png" alt="Hubert Hirthe">
+                </div>
+                <h4>Transfer learning <span></span></h4>
+                <p>Transfer learning allows quick and easy cutting edge results by harnessing generalized pretrained models on novel and 
+                    uniqe tasks. In this project, Resnet 34 and Resnet 50 models were used. The most recent model, which has 
+                    yielded the best results was a Resnet 34 with a Unet architecture, trained on progressive image sizes (128, 256) with an 
+                    unfrozen head. 
+         
+                </p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time></time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="static/img/data_prep/dice.png" alt="Cole Emmerich">
+                </div>
+                <h4>Dice coefficent <span></span></h4>
+                <p>This project relied on the Dice Coefficent as a performance metric. This is a frequently used
+                    metric for binary segmentation tasks and is essentially twice the number of pixesl of ovelap, divided by the total numbe of pixels. 
+                    The highest Dice Coefficent achieved was .898 
+                </p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time></time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="static/img/data_prep/loss.png" alt="Jack Christiansen">
+                </div>
+                <h4>Train and validation loss <span></span></h4>
+                <p> The model also maintained a balance between bias and variance, with the highest performing model 
+                    achieving .08 validation loss.  </p>
+              </div>
+            </div>
+
+            
+
+
+          </div>
+          <!-- End Schdule Day 2 -->
+
+          <!-- Schdule Day 3 -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time></time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="static/img/data_prep/deploy.png" alt="Hubert Hirthe">
+                </div>
+                <h4>Flask web app <span></span></h4>
+                <p>You're looking at it!</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time></time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="static/img/data_prep/git.png" alt="Cole Emmerich">
+                </div>
+                <h4>Public GitHub repo <span></span></h4>
+                <p>All of my methods, scripts, and code can be found on a public GitHub for reproducible science. </p>
+              </div>
+            </div>
+
+            
+
+         
+
+
+          </div>
+          <!-- End Schdule Day 2 -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+    
+
+
+
+    <!--==========================
+      Gallery Section
+    ============================-->
+    <section id="gallery" class="wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Check our gallery from the recent events</p>
+        </div>
+      </div>
+
+      <div class="owl-carousel gallery-carousel">
+        <a href="static/img/data_prep/deploy.png" class="venobox" data-gall="gallery-carousel"><img src="static/img/data_prep/deploy.png" alt=""></a>
+        <a href="static/img/data_prep/full.png" class="venobox" data-gall="gallery-carousel"><img src="static/img/data_prep/full.png" alt=""></a>
+        <a href="static/img/data_prep/screenshot.png" class="venobox" data-gall="gallery-carousel"><img src="static/img/data_prep/screenshot.png" alt=""></a>
+        <a href="static/img/data_prep/test.png" class="venobox" data-gall="gallery-carousel"><img src="static/img/data_prep/test.png" alt=""></a>
+        <a href="static/img/data_prep/mask.png" class="venobox" data-gall="gallery-carousel"><img src="static/img/data_prep/mask.png" alt=""></a>
+        <a href="static/img/data_prep/split.png" class="venobox" data-gall="gallery-carousel"><img src="static/img/data_prep/split.png" alt=""></a>
+        <a href="static/img/data_prep/grid.png" class="venobox" data-gall="gallery-carousel"><img src="static/img/data_prep/grid.png" alt=""></a>
+        
+      </div>
+
+    </section>
+
+    <!--==========================
+      Techstack Section
+    ============================-->
+    <section id="supporters" class="section-with-bg wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Technology Stack</h2>
+        </div>
+
+        <div class="row no-gutters supporters-wrap clearfix">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="static/img/data_prep/python.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="static/img/data_prep/qgis.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="static/img/data_prep/fastai.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="static/img/data_prep/colab.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="static/img/data_prep/pytorch.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="static/img/data_prep/flask.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--==========================
+      Next steps
+    ============================-->
+    <section id="faq" class="wow fadeInUp">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>further development </h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+              <ul id="faq-list">
+
+                <li>
+                  <a data-toggle="collapse" class="collapsed" href="#faq1">Reverse transformation <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq1" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Transform the predicted masks into spatial geometry. 
+                    </p>
+                  </div>
+                </li>
+      
+                <li>
+                  <a data-toggle="collapse" href="#faq2" class="collapsed">Continue to generalize model <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq2" class="collapse" data-parent="#faq-list">
+                    <p>
+                       Train the model on more image sizes and zoom levels to increase its abilty to generalize across various imagery. 
+                    </p>
+                  </div>
+                </li>
+      
+                <li>
+                  <a data-toggle="collapse" href="#faq3" class="collapsed"> Train precise models <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq3" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Train models for specific, precise applications based on geography, zoom, spatial extent, etc.  
+                    </p>
+                  </div>
+                </li>
+      
+                <li>
+                  <a data-toggle="collapse" href="#faq4" class="collapsed">Develop models for other features <i class="fa fa-minus-circle"></i></a>
+                  <div id="faq4" class="collapse" data-parent="#faq-list">
+                    <p>
+                      Train models on labeled datasets of road networks, bodies of water, land covers, plots, agriculture, etc. 
+                    </p>
+                  </div>
+                </li>
+      
+            
+      
+              </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+</main>
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="static/img/logo.png" alt="TheEvenet">
+            <p> Geospatial data analyisis using Deep Learning</p>
+          </div>
+
+         
+
+          
+
+         
+
+        </div>
+
+      </div>
+      </div>
+    <!-- </div> -->
+
+    <div class="container">
+      <div class="copyright">
+        &copy;  <strong>FastMap.ai</strong>. 
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="static/lib/jquery/jquery.min.js"></script>
+  <script src="static/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/lib/easing/easing.min.js"></script>
+  <script src="static/lib/superfish/hoverIntent.js"></script>
+  <script src="static/lib/superfish/superfish.min.js"></script>
+  <script src="static/lib/wow/wow.min.js"></script>
+  <script src="static/lib/venobox/venobox.min.js"></script>
+  <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <!-- <script src="contactform/contactform.js"></script> -->
+
+  <!-- Template Main Javascript File -->
+  <script src="static/js/main.js"></script>
+
+  <script>    
+    
+    var map_543b8639daa142bbabdac79382f79fe2 = L.map(
+        "map_543b8639daa142bbabdac79382f79fe2",
+        {
+            center: [37.7537286, -106.1078815],
+            crs: L.CRS.EPSG3857,
+            zoom: 2,
+            zoomControl: false,
+            preferCanvas: false,
+        }
+    );
+    var tile_layer_9543bcc749b740ce81c23f5df45d82d8 = L.tileLayer(
+        "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+        {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 40, "maxZoom": 40, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+    ).addTo(map_543b8639daa142bbabdac79382f79fe2);
+
+    
+    function onMapClick(e) {
+        lat = document.querySelector("#lat")
+        lat.value = e.latlng.lat
+
+        lng = document.querySelector("#lng")
+        lng.value = e.latlng.lng
+    }
+
+    map_543b8639daa142bbabdac79382f79fe2.on('click', onMapClick);
+
+</script>
+</body>
+</html>

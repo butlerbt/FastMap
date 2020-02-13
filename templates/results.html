@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>First Flask App Results</title>
+    <title>Results</title>
     <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 </head>
 <body>
@@ -9,8 +9,8 @@
     <br>
 
    
-    <img src="{{ url_for('static', filename='mask.png') + '?timestamp='+timestamp }}" alt="">
-
+    <img src="{{ url_for('static', filename='mask.png') + '?timestamp='+timestamp }}" alt="" width="512" height="512">
+    <img src="{{ url_for('static', filename='img.png') + '?timestamp='+timestamp }}" alt="" width="512" height="512">
     <a href="/">Go back home</a>
 </body>
 </html>
