@@ -10,6 +10,9 @@ phantomjs-2.1.1-macosx/
 #large Fast.ai models
 *.pth
 
+#workflow notebook
+map_deploy.ipynb
+
 #large pickle files
 *.pickle
 *.pkl
