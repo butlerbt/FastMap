@@ -33,8 +33,19 @@ The flask app script that utilizes the 'src/' modules to process images and make
 ### • templates directory
 Contains the results.html page displaying model outputs
 
+## Running the Flask Application
 
+To run in a development environment (on your local computer)
+```bash
+export FLASK_ENV=development
+env FLASK_APP=app.py flask run
+```
 
+To run in a production environment (used for deployment, but test it out locally first):
+```bash
+export FLASK_ENV=production
+python app.py
+```
 
 
 
