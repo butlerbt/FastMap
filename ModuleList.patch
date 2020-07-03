@@ -1,0 +1,9 @@
+--- /usr/local/lib/python3.6/dist-packages/torch/nn/modules/container.py
++++ /usr/local/lib/python3.6/dist-packages/torch/nn/modules/container.py
+@@ -108,6 +108,3 @@
+             self.add_module(str(offset + i), module)
+         return self
+ 
+-    def forward(self):
+-        raise NotImplementedError()
+-

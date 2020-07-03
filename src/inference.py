@@ -6,6 +6,8 @@ from fastai.callbacks import *
 from skimage import io
 from fastai.utils.collect_env import *
 import torch 
+#address SourceChangeWarning from
+torch.nn.Module.dump_patches = True
 import matplotlib
 matplotlib.use('Agg')
 
