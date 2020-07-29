@@ -139,7 +139,7 @@ tornado==6.0.3
 tqdm==4.41.1
 traitlets==4.3.3
 urllib3==1.25.7
-uvicorn==0.11.2
+uvicorn==0.11.7
 uvloop==0.14.0
 waitress==1.4.3
 wasabi==0.6.0
